@@ -30,7 +30,7 @@ MainMenuScreen::MainMenuScreen()
 
 	SetRemoveCallback(OnScreenRemove);
 
-	SetTransitionInTime(1.0f);
+	SetTransitionInTime(2.0f);// takes two seconds to fade in
 	SetTransitionOutTime(0.5f);
 
 	Show(); // Show the screen
@@ -77,8 +77,8 @@ void MainMenuScreen::Update(const GameTime *pGameTime)
 		pItem = GetMenuItem(i);
 		pItem->SetAlpha(GetAlpha());
 
-		if (pItem->IsSelected()) pItem->SetColor(Color::White);
-		else pItem->SetColor(Color::Blue);
+		if (pItem->IsSelected()) pItem->SetColor(Color::Red);  // the selected color will be Red
+		else pItem->SetColor(Color::RebeccaPurple);  // while the non selected color will be purple
 	}
 
 	MenuScreen::Update(pGameTime);
@@ -87,7 +87,7 @@ void MainMenuScreen::Update(const GameTime *pGameTime)
 void MainMenuScreen::Draw(SpriteBatch *pSpriteBatch)
 {
 	pSpriteBatch->Begin();
-	pSpriteBatch->Draw(m_pTexture, m_texturePosition, Color::White * GetAlpha(), m_pTexture->GetCenter());
+	pSpriteBatch->Draw(m_pTexture, m_texturePosition, Color::Orange * GetAlpha(), m_pTexture->GetCenter());    // Loading game screen will be orange
 	pSpriteBatch->End();
 
 	MenuScreen::Draw(pSpriteBatch);

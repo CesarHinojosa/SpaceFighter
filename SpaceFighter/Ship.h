@@ -13,7 +13,7 @@ public:
 
 	virtual void Update(const GameTime *pGameTime);
 
-	virtual void Draw(SpriteBatch *pSpriteBatch) = 0;
+	virtual void Draw(SpriteBatch *pSpriteBatch) = 0;  // pure virtual function
 
 	virtual void Hit(const float damage);
 
