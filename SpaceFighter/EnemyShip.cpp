@@ -17,8 +17,8 @@ void EnemyShip::Update(const GameTime *pGameTime)
 		//it will subtract the delay seconds towards the GetTimeElapsed
 		m_delaySeconds -= pGameTime->GetTimeElapsed();
 
-		//if the delay seconds is less than or equal to 6
-		if (m_delaySeconds <= 6) //adjusted the spawn time for the bio enemies
+		//if the delay seconds is less than or equal to 2
+		if (m_delaySeconds <= 2) //adjusted the spawn time for the bio enemies
 		{
 			//it will activate the enemy ships
 			GameObject::Activate();

@@ -20,7 +20,7 @@ void Level01::LoadContent(ResourceManager *pResourceManager)
 		0.5, 0.4, 0.6, 0.45, 0.55
 	};
 	
-	double delays[COUNT] =
+	double delays[COUNT] = // sets an array for the delay for all the enemy ships
 	{
 		0.0, 0.25, 0.25,
 		3.0, 0.25, 0.25,
@@ -29,7 +29,7 @@ void Level01::LoadContent(ResourceManager *pResourceManager)
 		3.5, 0.3, 0.3, 0.3, 0.3
 	};
 
-	float delay = 3.0; // start delay
+	float delay = 5.0; // start delay
 	Vector2 position;
 
 	for (int i = 0; i < COUNT; i++)
